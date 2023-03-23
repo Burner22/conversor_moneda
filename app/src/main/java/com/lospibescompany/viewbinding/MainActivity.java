@@ -28,15 +28,19 @@ public class MainActivity extends AppCompatActivity {
         //Inicializar MainActivityViewModel mv              //referencia a la app        //Clase que quiero crear
         mv = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainActivityViewModel.class);
 
+        binding.rbDolarEuro.setChecked(true);
+        binding.etDolaresCant.setEnabled(true);
+        binding.rbEuroDolar.setChecked(false);
+        binding.etEurosCant.setEnabled(false);
+
         //Poner listener al boton Convertir//De parametro va objeto OnClickListener
         binding.btConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Devuelve un editable que se puede parsear a necesidad
-
                 if(aux == "Euro a Dolar"){
                     mv.conversion(binding.etEurosCant.getText().toString(), aux);
-                    Toast.makeText(MainActivity.this, binding.etEurosCant.getText().toString() , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, binding.etEurosCant.getText().toString() , Toast.LENGTH_LONG).show();
                 }
                 else if (aux == "Dolar a Euro"){
                     mv.conversion(binding.etDolaresCant.getText().toString(), aux);
@@ -60,16 +64,21 @@ public class MainActivity extends AppCompatActivity {
                 // Manejar cambio de selección
                 RadioButton radioButton = findViewById(checkedId);
 
+                //Toast.makeText(context, aux, Toast.LENGTH_SHORT).show();
                 if(aux == "Euro a Dolar"){
                     aux = "Dolar a Euro";
-                    binding.etEurosCant.setEnabled(true);
-                    binding.etDolaresCant.setEnabled(false);
+                    binding.rbDolarEuro.setChecked(true);
+                    binding.etDolaresCant.setEnabled(true);
+                    binding.rbEuroDolar.setChecked(false);
+                    binding.etEurosCant.setEnabled(false);
                     //Toast.makeText(context, "dolares deshabilitados", Toast.LENGTH_SHORT).show();
                 }
-                else{
+                else if(aux == "Dolar a Euro"){
                     aux = "Euro a Dolar";
-                    binding.etEurosCant.setEnabled(false);
-                    binding.etDolaresCant.setEnabled(true);
+                    binding.rbDolarEuro.setChecked(false);
+                    binding.etDolaresCant.setEnabled(false);
+                    binding.rbEuroDolar.setChecked(true);
+                    binding.etEurosCant.setEnabled(true);
                     //Toast.makeText(context, "euros deshabilitados", Toast.LENGTH_SHORT).show();
                 }
                 //Toast.makeText(MainActivity.this, radioButton.getText() , Toast.LENGTH_SHORT).show();

@@ -36,14 +36,14 @@ public class MainActivityViewModel extends AndroidViewModel {
         double numero = Double.parseDouble(nro);
         double dolar = 1.09;
         double euro = 0.92;
-        //Toast.makeText(context, conv, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, nro, Toast.LENGTH_SHORT).show();
         if(conv == "Dolar a Euro"){
-            this.conversion.setValue(numero * dolar);
-            Toast.makeText(context, "llego de dolar a euro", Toast.LENGTH_SHORT).show();
+            this.conversion.setValue(numero/dolar);
+            Toast.makeText(context, "llego de dolar a euro", Toast.LENGTH_LONG).show();
         }
         else if(conv == "Euro a Dolar") {
-            this.conversion.setValue(numero * euro);
-            Toast.makeText(context, "llego de euro a dolar", Toast.LENGTH_SHORT).show();
+            this.conversion.setValue(numero/euro);
+            Toast.makeText(context, "llego de euro a dolar", Toast.LENGTH_LONG).show();
         }
     }
 }

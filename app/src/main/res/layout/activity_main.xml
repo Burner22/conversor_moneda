@@ -119,7 +119,7 @@
         android:id="@+id/tvResultado"
         android:layout_width="125dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="4dp"
         android:hint="Cantidad"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btConvertir"
