@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     binding.etDolaresCant.setEnabled(true);
                     binding.rbEuroDolar.setChecked(false);
                     binding.etEurosCant.setEnabled(false);
+                    binding.etEurosCant.setText("");
                     //Toast.makeText(context, "dolares deshabilitados", Toast.LENGTH_SHORT).show();
                 }
                 else if(aux == "Dolar a Euro"){
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     binding.etDolaresCant.setEnabled(false);
                     binding.rbEuroDolar.setChecked(true);
                     binding.etEurosCant.setEnabled(true);
+                    binding.etDolaresCant.setText("");
                     //Toast.makeText(context, "euros deshabilitados", Toast.LENGTH_SHORT).show();
                 }
                 //Toast.makeText(MainActivity.this, radioButton.getText() , Toast.LENGTH_SHORT).show();

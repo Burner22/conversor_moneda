@@ -13,13 +13,13 @@
         android:layout_height="54dp"
         android:ems="10"
         android:hint="Cantidad"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintVertical_bias="0.443" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -94,7 +94,7 @@
         android:layout_marginBottom="37dp"
         android:ems="10"
         android:hint="Cantidad"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/tvEuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.357"
@@ -107,13 +107,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cambio a..."
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/btConvertir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEurosCant"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="0.925" />
 
     <TextView
         android:id="@+id/tvResultado"
