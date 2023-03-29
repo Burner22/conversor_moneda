@@ -27,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
         //Inicializar MainActivityViewModel mv              //referencia a la app        //Clase que quiero crear
         mv = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainActivityViewModel.class);
 
-
+        binding.etDolaresCant.setEnabled(true);
+        binding.etEurosCant.setEnabled(false);
+        binding.rbDolarEuro.setChecked(true);
+        binding.rbEuroDolar.setChecked(false);
 
         binding.btConvertir.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
                 mv.conversion(binding.etDolaresCant.getText().toString(), binding.etEurosCant.getText().toString());
             }
         });
